@@ -1,21 +1,58 @@
-# Minimal C# Project for Visual Studio 2019
+# Emacs C# WPF IDE
 
-This repository contains a minimal C# console application that can be compiled using Visual Studio 2019. It includes a batch script for easy building from the command line.
+A minimalist Emacs-based IDE for C# and WPF development, optimized for Visual Studio 2019 integration.
+
+## Overview
+
+This repository provides a customized Emacs environment for C# and WPF development. It leverages Visual Studio 2019's tools while offering the power and flexibility of Emacs.
+
+## Features
+
+- Emacs configuration for C# and XAML editing
+- Integration with Visual Studio 2019 tools (MSBuild, C# compiler, OmniSharp)
+- Local package management and configuration
+- Syntax highlighting, code completion, and error checking
+- Basic XAML support
 
 ## Contents
 
-- `Program.cs`: A simple "Hello, World!" C# program
-- `SimpleCSharpProgram.csproj`: Project file compatible with VS2019
-- `SimpleCSharpProgram.sln`: Solution file
-- `compile.bat`: Batch script to compile the project using VS2019's devenv.com
+- `.dir-locals.el`: Local Emacs configuration for C# and WPF development
+- `Program.cs`: Sample C# program (from original repo)
+- `SimpleCSharpProgram.csproj`: Sample project file
+- `SimpleCSharpProgram.sln`: Sample solution file
+- `compile.bat`: Batch script for command-line compilation (to be updated for Emacs usage)
+
+## Prerequisites
+
+- Emacs (recent version recommended)
+- Visual Studio 2019 Professional (for MSBuild, C# compiler, and OmniSharp)
+
+## Setup
+
+1. Fork or clone this repository.
+2. Ensure Visual Studio 2019 Professional is installed.
+3. Open the project folder in Emacs.
+4. Emacs will automatically install required packages and configure the environment based on `.dir-locals.el`.
 
 ## Usage
 
-1. Ensure you have Visual Studio 2019 installed.
-2. Clone this repository.
-3. Run `compile.bat` to build the project.
-4. The compiled executable will be in `bin\Release\SimpleCSharpProgram.exe`.
+- Open `.cs` files to activate C# mode with OmniSharp integration.
+- Use `C-c C-c` to compile (uses MSBuild).
+- Navigate code with `C-c C-g` (go to definition) and other OmniSharp commands.
+- Edit `.xaml` files with basic XML support (enhanced XAML support coming soon).
+
+## Customization
+
+Modify `.dir-locals.el` to adjust package lists, key bindings, or add new features.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the WTFPL - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the WTFPL - see [LICENSE](https://en.wikipedia.org/wiki/WTFPL) for details.
+
+## Acknowledgements
+
+Based on the [minimal-csharp-vs2019](https://github.com/MinimalWindowsDev/minimal-csharp-vs2019) repository.
